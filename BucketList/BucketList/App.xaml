@@ -3,6 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BucketList.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorPrimary">#2196F3</Color>
+            <Color x:Key="ColorSecundary">#1976D2</Color>
+            <Color x:Key="ColorAccent">#ffffff</Color>
 
+            <OnPlatform x:Key="DefaultThickness" x:TypeArguments="Thickness">
+                <On Platform="Android" Value="20"></On>
+                <On Platform="UWP" Value="10"></On>                
+            </OnPlatform>
+
+            <Style x:Key="MainLayout" TargetType="StackLayout">
+                <Setter Property="Margin" Value="{StaticResource DefaultThickness}"/>
+            </Style>
+
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource ColorAccent}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimary}" />
+            </Style>
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
+             

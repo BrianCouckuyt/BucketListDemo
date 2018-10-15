@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BucketList.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,7 @@ namespace BucketList
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainView());
         }
 
         protected override void OnStart()
